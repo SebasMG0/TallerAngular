@@ -1,0 +1,35 @@
+
+  <div id="encabezado">
+      <div class="divIcon"><img id="tvIcon" src="https://cdn-icons-png.flaticon.com/512/3566/3566955.png"></div>
+      <div class="divTitulo" id="titulo"><h1 class="titulo" id="titSeries">Series</h1></div>
+  </div>
+  <div id="divMedio">
+      <div id="divTabla">
+          <table class="table" id="tablaSeries" style="min-height: 30rem; min-width: 30rem;">
+              <thead id="encabezadoTabla">
+                  <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Canal</th>
+                  <th scope="col">Temporadas</th>
+                  </tr>
+              </thead>
+              <tbody id="tabSeriesBody">
+                <tr *ngFor="let s of series">
+
+                  <td>{{s.id}}</td>
+                  <td><a id="{{s.id}}" href="#" >{{s.name}}</a></td>
+                  <td>{{s.channel}}</td>
+                  <td>{{s.seasons}}</td>
+
+                </tr>
+                <tr><th colspan=4 id="filaPromedio">Temporadas promedio: {{promedioSeries}}</th></tr>
+              </tbody>
+
+          </table>
+      </div>
+  </div>
+
+
+
+
